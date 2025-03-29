@@ -1,4 +1,4 @@
-
+const { default: mongoose } = require('mongoose');
 const moongoose = require('mongoose');
 
 const ownerSchema = moongoose.Schema({
@@ -10,7 +10,7 @@ const ownerSchema = moongoose.Schema({
         default : [],
     },
     picture : String,
-        gstin : String,
+        gstin : String, 
 });
 
 
