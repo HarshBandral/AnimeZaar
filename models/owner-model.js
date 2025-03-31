@@ -2,7 +2,11 @@ const { default: mongoose } = require('mongoose');
 const moongoose = require('mongoose');
 
 const ownerSchema = moongoose.Schema({
-    fullname : String,
+    fullname : {
+        type: String,
+        minLength : 3,
+        trim : true,
+    },
     email : String , 
     password : String ,
     products:{

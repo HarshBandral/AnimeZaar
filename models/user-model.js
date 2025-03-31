@@ -9,10 +9,10 @@ const userSchema = moongoose.Schema({
     },
     email : String , 
     password : String ,
-    cart : {
-        type : Array,
-        default : [],
-    },
+    cart : [{
+        type : moongoose.Schema.Types.ObjectId,
+        ref : 'product',
+    }],
     orders:{
         type : Array,
         default : [],

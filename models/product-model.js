@@ -2,7 +2,7 @@ const { default: mongoose } = require('mongoose');
 const moongoose = require('mongoose');
 
 const productSchema = moongoose.Schema({
-    image : String,
+    image : Buffer,// as a hexadecimal value
     name : String , 
     price : Number ,
     discount : {
