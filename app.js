@@ -11,8 +11,9 @@ const ownersRouter = require('./routes/ownersRouter');
 const usersRouter = require('./routes/usersRouter');
 const productsRouter = require('./routes/productsRouter');
 const indexRouter = require('./routes/index');
+const { connectDb } = require('./middlewares/db.js');
 
-const db = require('./config/mongoose-connection');
+// const db = require('./config/mongoose-connection');
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true})); 
@@ -37,5 +38,6 @@ app.use('/users',usersRouter);
 app.use('/products',productsRouter);
 
 app.listen(3000,()=>{
+    connectDb();
     console.log('running');
 });
