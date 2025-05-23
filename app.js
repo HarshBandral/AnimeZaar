@@ -13,8 +13,6 @@ const productsRouter = require('./routes/productsRouter');
 const indexRouter = require('./routes/index');
 const { connectDb } = require('./middlewares/db.js');
 
-// const db = require('./config/mongoose-connection');
-
 app.use(express.json());
 app.use(express.urlencoded({extended:true})); 
 app.use(cookieParser());
